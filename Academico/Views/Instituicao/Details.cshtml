@@ -29,3 +29,10 @@
     <a asp-action="Edit" asp-route-id="@Model?.InstituicaoID">Editar</a> |
     <a asp-action="Index">Voltar à lista</a>
 </div>
+<br /><br />
+<div class="col-sm-14">
+    @{
+		await Html.RenderPartialAsync("_ComDepartamentos", Model.Departamentos);
+    }
+</div>
+

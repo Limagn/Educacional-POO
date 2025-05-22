@@ -34,6 +34,7 @@ namespace Academico.Controllers
             }
 
             var instituicao = await _context.Instituicao
+                .Include(i => i.Departamentos)
                 .FirstOrDefaultAsync(m => m.InstituicaoID == id);
             if (instituicao == null)
             {
